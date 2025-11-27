@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Importario - Importação de Tecnologia para Angola</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="imagens/logo.png" alt=""></div>
+            <ul class="menu" id="menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="#" class="btnmenu" id="btnmenu">
+                menu +
+            </a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Tecnologia de Ponta para Angola</h1>
+        <p>Importamos os melhores telefones e PCs dos EUA e China</p>
+        <button class="cta-button" onclick="scrollToProducts()">Ver Produtos</button>
+    </section>
+
+    <a class="btn-ir-carrinho">Ver carrinho</a>
+
+    <section class="products-section" id="produtos">
+        <h2 class="section-title">Nossos Produtos</h2>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
+            <button class="filter-btn" onclick="filterProducts('telefone')">Telefones</button>
+            <button class="filter-btn" onclick="filterProducts('pc')">PCs</button>
+            <button class="filter-btn" onclick="filterProducts('eua')">USA</button>
+            <button class="filter-btn" onclick="filterProducts('china')">China</button>
+        </div>
+
+        <div class="searchdiv">
+            <form action="">
+                <input type="text" placeholder="Pesquisar Produtos ..." id="buscarproduto" name="buscarproduto"
+                    required>
+                <button type="submit" class="btnsub"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <section class="pedidos" id="pedidos">
+        <div class="contact-section">
+            <div class="contact-info">
+                <h2>Informações de Contato</h2>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> Endereço: Bairro Cacilhas Norte, Huambo, Angola</p>
+                    <p><i class="fas fa-phone"></i> Telefone: +244 930 060 830</p>
+                    <p><i class="fas fa-envelope"></i> E-mail: importario@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Horário de Atendimento: 24/24</p>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15849.99825231895!2d15.7571384!3d-12.7634949!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDQ1JzQ4LjYiUyAxNcKwNDUnMjYuNiJF!5e0!3m2!1spt-BR!2sao!4v1696015606013!5m2!1spt-BR!2sao"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Envie um Pedido/Mensagem</h2>
+                <form action="https://formsubmit.co/${CONFIG.emailDestino}" method="POST">
+                    <!-- Configurações do FormSubmit -->
+                    <input type="hidden" name="_subject" value="🛒 Novo Pedido - Importario">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_autoresponse"
+                        value="Obrigado pelo seu contato! Entraremos em contato em breve.">
+
+                    <!-- Enviar SMS para o número da Importario -->
+                    <input type="hidden" name="_cc" value="${CONFIG.telefoneDestino}">
+                    <input type="hidden" name="_replyto">
+
+                    <input type="text" name="nome" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu E-mail">
+                    <input type="tel" name="telefone" placeholder="Seu Telefone" required>
+                    <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit">Enviar Pedido/Mensagem</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="about-section" id="sobre">
+        <h2 class="section-title">Por Que Escolher a Importario?</h2>
+        <div class="about-content">
+            <div class="about-card">
+                <div class="about-icon">🌍</div>
+                <h3>Importação Direta</h3>
+                <p>Trabalhamos diretamente com fornecedores nos EUA e China para garantir os melhores preços</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">✅</div>
+                <h3>Qualidade Garantida</h3>
+                <p>Todos os produtos passam por rigoroso controle de qualidade antes da entrega</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">🚚</div>
+                <h3>Entrega Rápida</h3>
+                <p>Logística eficiente para entregar seus produtos em toda região centro de Angola</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>&copy; <span id="anoatual"></span> Importario Angola. Todos os direitos reservados.</p>
+        <p>Contacto: importario@gmail.com | +244 930 060 830</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/carrinho.css">
+    <title>Carrinho - Importario</title>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><img src="imagens/logo.png"></div>
+            <div>
+                <a href="index.html" style="
+            padding: 10px 25px;
+    background: var(--preta);
+    color: #ddd;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    transition: all 0.3s;
+    font-weight: 500;                
+                ">
+                    Voltar ao site</a>
+            </div>
+        </nav>
+    </header>
+
+    <h1><i class="fa fa-shopping-cart"></i> Seu Carrinho</h1>
+
+    <div class="cart-container">
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Qtd</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cartBody">
+                <!-- Produtos dinâmicos -->
+            </tbody>
+        </table>
+
+        <p id="emptyCart" class="empty-text" style="display: none;">O carrinho está vazio 😢</p>
+
+        <div class="total-box">
+            Total Geral: <span id="cartTotal">0 Kz</span>
+        </div>
+
+        <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    
+
+</body>
+
+</html>
