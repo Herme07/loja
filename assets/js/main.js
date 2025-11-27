@@ -4,7 +4,7 @@
 
 // Configurações
 const CONFIG = {
-    emailDestino: 'importario@gmail.com',
+    emailDestino: 'importarioao@gmail.com',
     telefoneDestino: '+244930060830', // Número da Importario para receber SMS
     moeda: 'Kz',
     storageKey: 'carrinho'
@@ -617,4 +617,5 @@ const anoAtual = document.getElementById('anoatual');
 if (anoAtual) {
     anoAtual.textContent = new Date().getFullYear();
 }
+
 
