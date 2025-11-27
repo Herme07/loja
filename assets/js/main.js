@@ -410,12 +410,6 @@ function finalizarCompra() {
     // Cria modal de finalização
     criarModalFinalizacao();
 }
-
-function criarModalFinalizacao() {
-    // Remove modal anterior se existir
-    const modalAntigo = document.getElementById('modal-finalizacao');
-    if (modalAntigo) modalAntigo.remove();
-
     const carrinho = obterCarrinho();
     const totalGeral = carrinho.reduce((sum, item) => sum + (item.preco * item.quantidade), 0);
 
@@ -617,5 +611,4 @@ const anoAtual = document.getElementById('anoatual');
 if (anoAtual) {
     anoAtual.textContent = new Date().getFullYear();
 }
-
 
