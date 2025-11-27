@@ -442,9 +442,6 @@ function finalizarCompra() {
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_autoresponse" value="Obrigado pelo seu pedido! Entraremos em contato em breve.">
                     
-                    <!-- Enviar SMS para o número da Importario -->
-                    <input type="hidden" name="_cc" value="${CONFIG.telefoneDestino}">
-                    <input type="hidden" name="_replyto">
                     
                     <!-- Dados do Pedido -->
                     <input type="hidden" name="Produtos_Detalhados" value="${listaProdutosEmail}">
@@ -611,4 +608,5 @@ const anoAtual = document.getElementById('anoatual');
 if (anoAtual) {
     anoAtual.textContent = new Date().getFullYear();
 }
+
 
